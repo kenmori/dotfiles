@@ -36,20 +36,25 @@ nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 " Start Neobundle Settings.
 "---------------------------
 "bundleで管理するディレクトリを指定
+if has('vim_starting')
+	set nocompatible "Be iMproved
+	"Resuired
 set runtimepath+=~/.vim/bundle/neobundle.vim/
-
+ endif
 "Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 "neobundle自体をneobundleで管理
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"-----------this erea new pulagin---------------------
-
+"-----------My Bundles here---------------------
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'grep.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'flazz/vim-coorschemes'
 
 "monokai color"
 let g:molokai_original = 1
@@ -98,11 +103,12 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 "NERDTree設定,bookmark at the start of NERDTree,
 call neobundle#end()
 let g:NERDTreeShowBokmarks=1
-"The NERDTree at the start of vim"
-if !argc()
-	autocmd vimenter * NERDTree|normal gg3j
-endif
 
+" 隠しファイルをデフォルトで表示させる
+let NERDTreeShowHidden = 1
+
+" デフォルトでツリーを表示させる
+autocmd VimEnter * execute 'NERDTree'
 
 
 "Required:
