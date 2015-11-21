@@ -16,6 +16,7 @@ set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
 
+
 "insertモードから抜ける
 inoremap <silent> <C-j> j
 inoremap <silent> <C-k> k
