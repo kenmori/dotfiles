@@ -44,7 +44,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 "neobundle自体をneobundleで管理
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"このあたりに追加のプラグインをどんどん書く"
+"-----------this erea new pulagin---------------------
+
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'grep.vim'
 NeoBundle 'mattn/emmet-vim'
@@ -94,8 +95,15 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 """"""""""""""""""""""""""""""" "
 
-"NERDTree設定
+"NERDTree設定,bookmark at the start of NERDTree,
 call neobundle#end()
+let g:NERDTreeShowBokmarks=1
+"The NERDTree at the start of vim"
+if !argc()
+	autocmd vimenter * NERDTree|normal gg3j
+endif
+
+
 
 "Required:
 filetype plugin indent on
