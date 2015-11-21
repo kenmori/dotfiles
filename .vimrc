@@ -16,7 +16,6 @@ set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
 
-
 "insertモードから抜ける
 inoremap <silent> <C-j> j
 inoremap <silent> <C-k> k
@@ -44,6 +43,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'grep.vim'
 NeoBundle 'mattn/emmet-vim'
+
+
+
+"indent color
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 
 
