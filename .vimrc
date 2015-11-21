@@ -48,6 +48,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'grep.vim'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'scrooloose/nerdcommenter'
+
 
 
 
@@ -57,6 +59,10 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 
+"nerdcommenter用 cc でコメントorコメントアウト
+let NERDSpaceDelims = 1
+nmap cc NERDCommenterToggle
+vmap cc NERDCommenterToggle"
 
 
 
