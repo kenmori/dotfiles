@@ -50,8 +50,8 @@ NeoBundle 'grep.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdcommenter'
 
-
-
+"monokai color"
+let g:molokai_original = 1
 
 "indent color
 let g:indent_guides_auto_colors = 0
@@ -70,9 +70,7 @@ vmap cc NERDCommenterToggle"
  NeoBundle 'Shougo/unite.vim'
 "Unite.vimで最近使ったファイルを表示できるようにする
  NeoBundle 'Shougo/neomru.vim'
-
-"http://blog.remora.cx/2010/12/vim-ref-with-unite.html
-""""""""""""""""""""""""""""""
+ """"""""""""""""""""""""""""""
 "Unit.vimの設定
 """"""""""""""""""""""""""""""
 "入力モードで開始する
@@ -96,9 +94,7 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 """"""""""""""""""""""""""""""" "
 
-"NERDTreeを設定
-NeoBundle 'scrooloose/nerdtree'
-
+"NERDTree設定
 call neobundle#end()
 
 "Required:
