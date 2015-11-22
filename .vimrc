@@ -1,15 +1,20 @@
-"###表示設定###
+"###表示設定#/##
 set shell=/bin/sh
 set number
 syntax on
 colorscheme molokai 
 set t_Co=256
 set title
+set fileencoding=utf-8
+set encoding=utf-8
+set incsearch
+set ruler
 set ambiwidth=double
 set tabstop=2
 set shiftwidth=2
-set shiftstop=2
 set smartindent
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+set showmatch
 set autoindent
 set expandtab
 set list
@@ -25,10 +30,8 @@ set virtualedit=block
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
-set willdmode=list:longest,full
 set noerrorbells
 set novisualbell
-set vesualbell t_vb=
 set ignorecase
 set smartcase
 set hlsearch
@@ -59,10 +62,10 @@ nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 "bundleで管理するディレクトリを指定
 if has('vim_starting')
 	set nocompatible "Be iMproved
-	"Resuired
+	"Resuired;
 set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
-"Required:
+  "Resuired
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 "neobundle自体をneobundleで管理
@@ -73,14 +76,20 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'grep.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'flazz/vim-coorschemes'
 
-"monokai color"
+"You can specify revision/branch/tag
+NeoBunble 'Shougo/vimshell', {'rev' : '3787e5'}
+NeoBundle 'Shougo/unite.vim'
+"Unite.vimで最近使ったファイルを表示できるようにする
+NeoBundle 'Shougo/neomru.vim'
+
+   
 let g:molokai_original = 1
-
-
 
 "nerdcommenter用 cc でコメントorコメントアウト
 let NERDSpaceDelims = 1
@@ -88,11 +97,9 @@ nmap cc NERDCommenterToggle
 vmap cc NERDCommenterToggle"
 
 
-
 "ファイルオープンを便利に
- NeoBundle 'Shougo/unite.vim'
-"Unite.vimで最近使ったファイルを表示できるようにする
- NeoBundle 'Shougo/neomru.vim'
+
+"----------------------------------各プラグイン設定-------------------------------------------------- 
  """"""""""""""""""""""""""""""
 "Unit.vimの設定
 """"""""""""""""""""""""""""""
@@ -116,17 +123,23 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-K>
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 """"""""""""""""""""""""""""""" "
+"INSERTから抜けたらIME解除
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+
+
 
 "NERDTree設定,bookmark at the start of NERDTree,
 call neobundle#end()
 let g:NERDTreeShowBokmarks=1
 
+
+
+
 " 隠しファイルをデフォルトで表示させる
 let NERDTreeShowHidden = 1
 
-" デフォルトでツリーを表示させる
-autocmd VimEnter * execute 'NERDTree'
-
+" ファイル未指定でvim起動時デフォルトでツリーを表示させる
+autocmd vimenter * if !argc() | NERDTree | endif
 
 "Required:
 filetype plugin on
