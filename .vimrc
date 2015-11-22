@@ -39,6 +39,8 @@ set wrapscan
 set gdefault
 
 
+inoremap <silent> jj <ESC>
+
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
