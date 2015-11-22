@@ -81,7 +81,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'flazz/vim-coorschemes'
 
 "You can specify revision/branch/tag
 NeoBundle 'Shougo/unite.vim'
