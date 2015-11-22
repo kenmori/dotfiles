@@ -81,14 +81,29 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'taichouchou2/vim-javascript'
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'tell-k/vim-browsereload-mac'
+NeoBundle 'taichouchou2/surround.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'open-browser.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Quramy/tsuquyomi'
+
+
+
 
 "You can specify revision/branch/tag
 NeoBundle 'Shougo/unite.vim'
 "Unite.vimで最近使ったファイルを表示できるようにする
 NeoBundle 'Shougo/neomru.vim'
 
-   
+
+
+
 let g:molokai_original = 1
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
 "nerdcommenter用 cc でコメントorコメントアウト
 let NERDSpaceDelims = 1
