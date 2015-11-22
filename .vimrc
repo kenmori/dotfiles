@@ -1,20 +1,41 @@
 "###表示設定###
 set shell=/bin/sh
 set number
+syntax on
+colorscheme molokai 
+set t_Co=256
 set title
 set ambiwidth=double
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set shiftstop=2
 set smartindent
+set autoindent
+set expandtab
 set list
+set backupdir=~/vimfiles/backup "backupdir"
+set confirm "保存されていないファイルがある場合確認"
+set autoread "外部でファイルに変更が競れた場合は読み直す"
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set nrformats-=octal
 set hidden
 set history=50
+set infercase
 set virtualedit=block
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
+set willdmode=list:longest,full
+set noerrorbells
+set novisualbell
+set vesualbell t_vb=
+set ignorecase
+set smartcase
+set hlsearch
+set wrapscan
+set gdefault
+
+
 
 "insertモードから抜ける
 inoremap <silent> <C-j> j
@@ -59,10 +80,6 @@ NeoBundle 'flazz/vim-coorschemes'
 "monokai color"
 let g:molokai_original = 1
 
-"indent color
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 
 "nerdcommenter用 cc でコメントorコメントアウト
@@ -112,7 +129,9 @@ autocmd VimEnter * execute 'NERDTree'
 
 
 "Required:
-filetype plugin indent on
+filetype plugin on
+filetype indent on
+filetype on
 
 
 "未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
