@@ -83,7 +83,6 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'flazz/vim-coorschemes'
 
 "You can specify revision/branch/tag
-NeoBunble 'Shougo/vimshell', {'rev' : '3787e5'}
 NeoBundle 'Shougo/unite.vim'
 "Unite.vimで最近使ったファイルを表示できるようにする
 NeoBundle 'Shougo/neomru.vim'
