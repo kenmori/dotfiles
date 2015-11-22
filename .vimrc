@@ -39,12 +39,6 @@ set wrapscan
 set gdefault
 
 
-
-"insertモードから抜ける
-inoremap <silent> <C-j> j
-inoremap <silent> <C-k> k
-
-
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
@@ -55,18 +49,23 @@ nnoremap [q :cprevious<CR>   " 前へ
 nnoremap ]q :cnext<CR>       " 次へ
 nnoremap [Q :<C-u>cfirst<CR> " 最初へ
 nnoremap ]Q :<C-u>clast<CR>  " 最後へ
-
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "---------------------------
 " Start Neobundle Settings.
 "---------------------------
 "bundleで管理するディレクトリを指定
+filetype off
+set nocompatible "Be iMproved
 if has('vim_starting')
-	set nocompatible "Be iMproved
-	"Resuired;
+"Resuired;
 set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
-  "Resuired
 call neobundle#begin(expand('~/.vim/bundle/'))
+
+endif
+  "Resuired
+NeoBundle 'scrooloose/nerdtree'
+filetype plugin indent on
+
 
 "neobundle自体をneobundleで管理
 NeoBundleFetch 'Shougo/neobundle.vim'
