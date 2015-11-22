@@ -88,7 +88,6 @@ NeoBundle 'tell-k/vim-browsereload-mac'
 NeoBundle 'taichouchou2/surround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'open-browser.vim'
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'Quramy/tsuquyomi'
 
 
