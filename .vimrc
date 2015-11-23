@@ -37,6 +37,55 @@ set smartcase
 set hlsearch
 set wrapscan
 set gdefault
+set nocompatible
+
+filetype off
+
+"---------------------------
+" Start Neobundle Settings.
+"---------------------------
+"bundleで管理するディレクトリを指定
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#begin(expand('~/.vim/bundle/'))
+endif
+
+
+NeoBundle 'scrooloose/nerdtree'
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'grep.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'tell-k/vim-browsereload-mac'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'open-browser.vim'
+NeoBundle 'Quramy/tsuquyomi'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/neocomplcache'
+
+call neobundle#end()
+
+
+filetype plugin indent on
+filetype plugin on
+filetype on
+
+
+
+
+
+
+
+
 
 
 inoremap <silent> jj <ESC>
@@ -52,70 +101,25 @@ nnoremap ]q :cnext<CR>       " 次へ
 nnoremap [Q :<C-u>cfirst<CR> " 最初へ
 nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-"---------------------------
-" Start Neobundle Settings.
-"---------------------------
-"bundleで管理するディレクトリを指定
-filetype off
-set nocompatible "Be iMproved
-if has('vim_starting')
-"Resuired;
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-endif
-  "Resuired
-NeoBundle 'scrooloose/nerdtree'
-filetype plugin indent on
-
-
-"neobundle自体をneobundleで管理
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-"-----------My Bundles here---------------------
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'grep.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'taichouchou2/vim-javascript'
-NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'tell-k/vim-browsereload-mac'
-NeoBundle 'taichouchou2/surround.vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'open-browser.vim'
-NeoBundle 'Quramy/tsuquyomi'
-
-
-
-
-"You can specify revision/branch/tag
-NeoBundle 'Shougo/unite.vim'
-"Unite.vimで最近使ったファイルを表示できるようにする
-NeoBundle 'Shougo/neomru.vim'
 
 
 
 
 let g:molokai_original = 1
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
 "nerdcommenter用 cc でコメントorコメントアウト
 let NERDSpaceDelims = 1
 nmap cc NERDCommenterToggle
 vmap cc NERDCommenterToggle"
 
+let g:user_emmet_leader_key='<c-i>'
 
 "ファイルオープンを便利に
 
-"----------------------------------各プラグイン設定-------------------------------------------------- 
- """"""""""""""""""""""""""""""
+"----------------------------------各プラグイン設定-------------------- 
+ """""""""""""""""
 "Unit.vimの設定
-""""""""""""""""""""""""""""""
+""""""""""""""""""
 "入力モードで開始する
 let g:unite_enable_start_insert=1
 "バッファ一覧
@@ -139,13 +143,7 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 "INSERTから抜けたらIME解除
 inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 
-
-
-"NERDTree設定,bookmark at the start of NERDTree,
-call neobundle#end()
 let g:NERDTreeShowBokmarks=1
-
-
 
 
 " 隠しファイルをデフォルトで表示させる
@@ -154,11 +152,33 @@ let NERDTreeShowHidden = 1
 " ファイル未指定でvim起動時デフォルトでツリーを表示させる
 autocmd vimenter * if !argc() | NERDTree | endif
 
-"Required:
-filetype plugin on
-filetype indent on
-filetype on
+"-------------------------------------------------
+"""" neosnippet設定
+"-------------------------------------------------
+""" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
+
+
+
+
+
+
+
+:" SuperTab like snippets behavior.
+ imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+ \ "\<Plug>(neosnippet_expand_or_jump)"
+ \: pumvisible() ? "\<C-n>" : "\<TAB>"
+ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+ \ "\<Plug>(neosnippet_expand_or_jump)"
+ \: "\<TAB>"
+
+ " For snippet_complete marker.
+ if has('conceal')
+   set conceallevel=2 concealcursor=i
+   endif
 
 "未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
 "毎回聞かれると邪魔な場合もあるので、この設定は任意です。
