@@ -38,6 +38,7 @@ set hlsearch
 set wrapscan
 set gdefault
 set nocompatible
+set guicursor=a:blinkon0
 
 filetype off
 
