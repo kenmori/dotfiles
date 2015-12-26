@@ -1,5 +1,6 @@
 "###表示設定#/##
 set shell=/bin/sh
+set runtimepath+=./afixapp
 set number
 syntax on
 colorscheme molokai 
@@ -18,7 +19,7 @@ set showmatch
 set autoindent
 set expandtab
 set list
-set backupdir=~/vimfiles/backup "backupdir"
+set backupdir=~/vimfiles/backup
 set confirm "保存されていないファイルがある場合確認"
 set autoread "外部でファイルに変更が競れた場合は読み直す"
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
@@ -82,9 +83,10 @@ filetype on
 
 
 
-
-
-
+"QuikFixウィンドウでもプレビューや絞り込みを有効か
+let QFixWin_FnableMode = 1
+"QFixHowm/QFixGrepの結果表示にロケーションリストを使用する/しない
+let QFix_UseLocationList = 1
 
 
 
