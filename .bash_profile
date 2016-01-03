@@ -15,6 +15,9 @@ alias gcm='git checkout master'
 alias gpom='git pull origin master'
 alias gmm='git merge master'
 alias cg='cd /Users/No51/Desktop/Git'
+if [[ -s ~/.nvm/nvm.sh ]];
+then source ~/.nvm/nvm.sh
+fi
 
 
 
