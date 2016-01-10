@@ -6,7 +6,9 @@ export PATH="/usr/local/bash/bin:$PATH"
 
 alias la='ls -la'
 alias ll='ls -la'
-
+alias vd='vim ~/dotfiles'
+alias myexapp='cd /Users/No51/Documents/workspace/myexapp/'
+alias mongod='/data/db/bin/mongod'
 alias gb='git branch'
 alias gc='git checkout'
 alias gcb='git checkout -b'
@@ -15,7 +17,14 @@ alias gcm='git checkout master'
 alias gpom='git pull origin master'
 alias gmm='git merge master'
 alias cg='cd /Users/No51/Desktop/Git'
+alias cm='cd /data/db/bin'
+alias cn='cd /Users/No51/Documents/workspace/myexapp'
+alias cdt='cd /Users/No51/dotfiles'
+
+
 if [[ -s ~/.nvm/nvm.sh ]];
+
+
 then source ~/.nvm/nvm.sh
 fi
 
