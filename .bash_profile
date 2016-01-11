@@ -1,31 +1,12 @@
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export PATH="/usr/local/bash/bin:$PATH"
-
-alias la='ls -la'
-alias ll='ls -la'
-alias vd='vim ~/dotfiles'
-alias myexapp='cd /Users/No51/Documents/workspace/myexapp/'
-alias mongod='/data/db/bin/mongod'
-alias gb='git branch'
-alias gc='git checkout'
-alias gcb='git checkout -b'
-alias gs='git status'
-alias gcm='git checkout master'
-alias gpom='git pull origin master'
-alias gmm='git merge master'
-alias cg='cd /Users/No51/Desktop/Git'
-alias cm='cd /data/db/bin'
-alias cn='cd /Users/No51/Documents/workspace/myexapp'
-alias cdt='cd /Users/No51/dotfiles'
+#ターミナル起動時は[.bash_profile]から[.basrc],シェル切り替えでは「.bashrc」が単体で読み込まれる
+#ので以後の設定は[/bashrc]に記述すればどのような場合でも同じパス設定が読み込まれる
+if [-f ~/.dotfiles/.bashrc];then
+  . ~/dotfiles/.bashrc
+fi
 
 
-if [[ -s ~/.nvm/nvm.sh ]];
-
-
-then source ~/.nvm/nvm.sh
+if [[ -s ~/.nvm/nvm.sh ]];then
+  source ~/.nvm/nvm.sh
 fi
 
 
