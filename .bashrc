@@ -22,3 +22,4 @@ alias cm='cd /data/db/bin'
 alias cn='cd /Users/No51/Documents/workspace/myexapp'
 alias cdt='cd /Users/No51/dotfiles'
 
+echo 'called bashrc!'
