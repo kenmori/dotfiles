@@ -11,12 +11,18 @@ alias vbp='vim ~/dotfiles/.bash_profile'
 alias myexapp='cd /Users/No51/Documents/workspace/myexapp/'
 alias ct='cd /Users/No51/Applications/apache-tomcat-7.0.67/bin'
 alias mongod='/data/db/bin/mongod'
-alias cd eclipse='cd /Users/No51/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
-alias cd workspace='cd /Users/No51/Documents/workspace'
+alias cec='cd /Users/No51/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
+alias cwo='cd /Users/No51/Documents/workspace'
+### blog
+alias cbl="cd /Users/No51/Desktop/Git/kenmori.github.io/myblog"
+alias hs="hexo server"
+
+#git
 alias gb='git branch'
 alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gs='git status'
+alias ga='git add .'
 alias gcm='git checkout master'
 alias gpom='git pull origin master'
 alias gmm='git merge master'
