@@ -17,7 +17,11 @@ alias cwo='cd /Users/No51/Documents/workspace'
 alias cbl="cd /Users/No51/Desktop/Git/kenmori.github.io/myblog"
 alias hs="hexo server"
 
+#hub
+eval "$(hub alias -s)"
+
 #git
+
 alias gb='git branch'
 alias gc='git checkout'
 alias gcb='git checkout -b'
