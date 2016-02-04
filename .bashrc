@@ -19,9 +19,16 @@ alias hs="hexo server"
 
 #hub
 eval "$(hub alias -s)"
+alias hup='hub pull-request'
+alias hus='hub see'
+
+
+#tmux
+alias ts='tmux list-sessions'
+alias t='tmux'
+alias tc='tmux list-client'
 
 #git
-
 alias gb='git branch'
 alias gc='git checkout'
 alias gcb='git checkout -b'
