@@ -52,3 +52,10 @@ vim-mode-clipboard-plus
 vim-mode-visual-block
 vim-surround
 zentabs
+jumpy
+minimap-autohide
+minimap-bookmarks
+pigments
+minimap-pigments
+language-json
+language-babel
