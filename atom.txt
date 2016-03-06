@@ -59,3 +59,4 @@ pigments
 minimap-pigments
 language-json
 language-babel
+esformatter
