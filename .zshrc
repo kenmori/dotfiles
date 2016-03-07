@@ -53,11 +53,17 @@ plugins=(git)
 
 # User configuration
 
+export NVM_DIR="$HONE/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This load nvm
+
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
+
+alias a='atom ./'
 alias -g G='| grep'
 alias -g L='| less'
 alias -g H='| head'
@@ -78,6 +84,7 @@ alias vd='vim ~/dotfiles'
 alias vbr='vim ~/dotfiles/.bashrc'
 alias vbp='vim ~/dotfiles/.bash_profile'
 alias myexapp='cd /Users/No51/Documents/workspace/myexapp/'
+alias re='cd /Users/No51/Desktop/Git/react/react_es6/react_es6_2'
 alias ct='cd /Users/No51/Applications/apache-tomcat-7.0.67/bin'
 alias mongod='/data/db/bin/mongod'
 alias cec='cd /Users/No51/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
