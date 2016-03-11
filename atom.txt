@@ -60,3 +60,4 @@ minimap-pigments
 language-json
 language-babel
 esformatter
+editorconfig
