@@ -118,8 +118,8 @@ alias cg='cd /Users/No51/Desktop/Git'
 alias cm='cd /data/db/bin'
 alias cn='cd /Users/No51/Documents/workspace/myexapp'
 alias cdt='cd /Users/No51/dotfiles'
-
-
+alias cdspri='cd /Users/No51/Desktop/Git/springBoot/moriboot'
+alias cdsca='cd /Users/No51/Desktop/Git/scala'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
