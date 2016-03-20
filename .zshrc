@@ -60,6 +60,9 @@ export NVM_DIR="$HONE/.nvm"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export SCALA_HOME=/path/to/scala
+export PATH=PATH:PATH:SCALA_HOME/bin
+
 source $ZSH/oh-my-zsh.sh
 
 
