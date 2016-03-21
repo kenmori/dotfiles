@@ -2,6 +2,9 @@
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="/usr/local/bash/bin:$PATH"
+export SCALA_HOME=/path/to/scala
+export PATH=PATH:PATH:SCALA_HOME/bin
+
 
 alias la='ls -la'
 alias ll='ls -la'
