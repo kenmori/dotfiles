@@ -5,19 +5,21 @@ export PATH="/usr/local/bash/bin:$PATH"
 export SCALA_HOME=/path/to/scala
 export PATH=PATH:PATH:SCALA_HOME/bin
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 alias la='ls -la'
 alias ll='ls -la'
 alias vd='vim ~/dotfiles'
 alias vbr='vim ~/dotfiles/.bashrc'
 alias vbp='vim ~/dotfiles/.bash_profile'
-alias myexapp='cd /Users/No51/Documents/workspace/myexapp/'
-alias ct='cd /Users/No51/Applications/apache-tomcat-7.0.67/bin'
+alias myexapp='cd /Users/moritakenji/Documents/workspace/myexapp/'
+alias ct='cd /Users/moritakenji/Applications/apache-tomcat-7.0.67/bin'
 alias mongod='/data/db/bin/mongod'
-alias cec='cd /Users/No51/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
-alias cwo='cd /Users/No51/Documents/workspace'
+alias cec='cd /Users/moritakenji/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
+alias cwo='cd /Users/moritakenji/Documents/workspace'
 ### blog
-alias cbl="cd /Users/No51/Desktop/Git/kenmori.github.io/myblog"
+alias cbl="cd /Users/moritakenji/Desktop/Git/kenmori.github.io/myblog"
 alias hs="hexo server"
 
 #hub
@@ -40,9 +42,9 @@ alias ga='git add .'
 alias gcm='git checkout master'
 alias gpom='git pull origin master'
 alias gmm='git merge master'
-alias cg='cd /Users/No51/Desktop/Git'
+alias cg='cd /Users/moritakenji/Desktop/Git'
 alias cm='cd /data/db/bin'
-alias cn='cd /Users/No51/Documents/workspace/myexapp'
-alias cdt='cd /Users/No51/dotfiles'
+alias cn='cd /Users/moritakenji/Documents/workspace/myexapp'
+alias cdt='cd /Users/moritakenji/dotfiles'
 
 echo 'called bashrc!'
