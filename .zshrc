@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/No51/.oh-my-zsh
+export ZSH=/Users/moritakenji/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -86,15 +86,15 @@ alias ll='ls -la'
 alias vd='vim ~/dotfiles'
 alias vbr='vim ~/dotfiles/.bashrc'
 alias vbp='vim ~/dotfiles/.bash_profile'
-alias myexapp='cd /Users/No51/Documents/workspace/myexapp/'
-alias re='cd /Users/No51/Desktop/Git/react/react_es6/react_es6_2'
-alias ct='cd /Users/No51/Applications/apache-tomcat-7.0.67/bin'
+alias myexapp='cd /Users/moritakenji/Documents/workspace/myexapp/'
+alias re='cd /Users/moritakenji/Desktop/Git/react/react_es6/react_es6_2'
+alias ct='cd /Users/moritakenji/Applications/apache-tomcat-7.0.67/bin'
 alias mongod='cd /data/db/bin/mongod'
-alias eclipse='cd /Users/No51/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
-alias cec='cd /Users/No51/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
-alias cwo='cd /Users/No51/Documents/workspace'
+alias eclipse='cd /Users/moritakenji/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
+alias cec='cd /Users/moritakenji/eclipse/jee-mars/Eclipse.app/Contents/Eclipse'
+alias cwo='cd /Users/moritakenji/Documents/workspace'
 ## blog
-alias cbl="cd /Users/No51/Desktop/Git/kenmori.github.io/myblog"
+alias cbl="cd /Users/moritakenji/Desktop/Git/kenmori.github.io/myblog"
 alias hs="hexo server"
 
 #hub
@@ -117,12 +117,12 @@ alias ga='git add .'
 alias gcm='git checkout master'
 alias gpom='git pull origin master'
 alias gmm='git merge master'
-alias cg='cd /Users/No51/Desktop/Git'
+alias cg='cd /Users/moritakenji/Desktop/Git'
 alias cm='cd /data/db/bin'
-alias cn='cd /Users/No51/Documents/workspace/myexapp'
-alias cdt='cd /Users/No51/dotfiles'
-alias cdspri='cd /Users/No51/Desktop/Git/springBoot/moriboot'
-alias cdsca='cd /Users/No51/Desktop/Git/scala'
+alias cn='cd /Users/moritakenji/Documents/workspace/myexapp'
+alias cdt='cd /Users/moritakenji/dotfiles'
+alias cdspri='cd /Users/moritakenji/Desktop/Git/springBoot/moriboot'
+alias cdsca='cd /Users/moritakenji/Desktop/Git/scala'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
