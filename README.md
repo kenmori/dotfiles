@@ -23,6 +23,15 @@ if open vim run
 ```
 :NeoBundleInstall
 :NeoBundleUpdate
+```
+
+install Homebrew
+
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+```
+
 
 brew install vim
 ```
@@ -85,7 +94,7 @@ brew update && brew upgrade
 デフォルトをbrewでinstallしたzshに変える
 
 ```
-$ brew install zsh
+brew install zsh
 cat /etc/shells
 ```
 
