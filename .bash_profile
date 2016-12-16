@@ -9,6 +9,9 @@ if [ -s ~/.nvm/nvm.sh ];then
   source ~/.nvm/nvm.sh
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 echo 'login!!'
 
 #bash_profileからbashrcを読み込む設定
