@@ -9,12 +9,32 @@ $ git clone https://github.com/kenmori/dotfiles2.git
 $ sh ~/dotfiles2/setup.sh
 ```
 
-run
+**必須**
+
+`＄HOME`で
+
+`oh-my-zsh`・・・zshを使いやすくしてくれる(カレントディレクトリの表示とか)
+
+```sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"```
+
+街灯のところはデフォルトでiterm2を始めた時zhrcを読みに行き、更新コマンドを叩いている
+
+<img src="https://kenjimorita.jp/wp-content/uploads/2018/12/efa419a642cbf049bb0af136e3c5b986.png" width="600"/>
+
+
+`neoBundle`・・・vimrc内でプラグインを管理インストールするためのもの
 
 ```
 $ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
 $ sh ./install.sh
 see: https://github.com/Shougo/neobundle.vim
+```
+
+.vimrcで呼ばれるneoBundleと同じようなvimプラグイン管理
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    
 ```
 
 sh実行で書かれている`.vimrc`に貼り付けるべき記述をコピペ
@@ -30,24 +50,21 @@ if open vim run
 :NeoBundleUpdate
 ```
 
-＄HOMEで
-
-oh-my-zshを入れる
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-<img src="https://kenjimorita.jp/wp-content/uploads/2018/12/efa419a642cbf049bb0af136e3c5b986.png" width="600"/>
-
 install Homebrew
 [https://brew.sh/index_ja](https://brew.sh/index_ja)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 ```
 
-brew install vim
-```
+`brew`を`install`時に権限関係でエラーが出たら
+[【解決】HomeBrewをインストールした際に権限エラーでる「When you install HomeBrew, the console might show you fllowing code」](https://kenjimorita.jp/homebrew/)
+
+
+ここまでは最低限の設定
+----
+
+`brew install vim` アップデートの確認
 
 もし古いvimをインストールして使えないプラグインが出てきたら
 .bashrcと.zhrcに以下を追加
