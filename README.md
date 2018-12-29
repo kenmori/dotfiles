@@ -1,23 +1,28 @@
 # dotfiles
 
-```
-$ git clone git@github.com:kenmori/dotfiles.git ~/dotfiles --recursive
-or
-$ git clone https://github.com/kenmori/dotfiles.git
-$ sh ~/dotfiles/setup.sh
-```
+ログインユーザーのrootでやること
 
 ```
-cd dotfiles
+$ git clone git@github.com:kenmori/dotfile2s.git ~/dotfiles2 --recursive
+or
+$ git clone https://github.com/kenmori/dotfiles2.git
+$ sh ~/dotfiles2/setup.sh
 ```
 
 run
 
 ```
-$ git submodule add https://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
+$ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+$ sh ./install.sh
+see: https://github.com/Shougo/neobundle.vim
 ```
 
-vim dotfiles
+sh実行で書かれている`.vimrc`に貼り付けるべき記述をコピペ
+
+`source dotfiles2/.vimrc`
+
+vim dotfiles2
+
 if open vim run
 
 ```
@@ -25,13 +30,21 @@ if open vim run
 :NeoBundleUpdate
 ```
 
+＄HOMEで
+
+oh-my-zshを入れる
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+<img src="https://kenjimorita.jp/wp-content/uploads/2018/12/efa419a642cbf049bb0af136e3c5b986.png" width="600"/>
+
 install Homebrew
+[https://brew.sh/index_ja](https://brew.sh/index_ja)
 
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 ```
-
 
 brew install vim
 ```
